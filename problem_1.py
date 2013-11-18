@@ -12,7 +12,6 @@ def main(n=1000000):
     count = 0
     sum = 0
     while count< n:
-        #print "count", count
         
         if count %3==0 or count%5==0:
             
