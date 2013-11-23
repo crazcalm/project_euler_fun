@@ -5,7 +5,7 @@ import time
 
 
 
-def main(n=1000000):
+def main(n=1000):
     
     start = time.clock()
     
