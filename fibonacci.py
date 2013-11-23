@@ -1,7 +1,5 @@
 """
 Fibonacci numbers
-
-
 """
 import time
 
@@ -29,7 +27,7 @@ def fibonacci(n=10):
     endtime = time.clock() - start
     
     print "The %sth fibonacci number is %s" %(count, fib_n)
-    print endtime
+    return fib_n
     
     
 def fib(n=10):
@@ -57,10 +55,6 @@ def fib(n=10):
     
     print "The %sth fibonacci number is %s" %(count, fib_n)
     print endtime
-        
-        
-for num in fib():
-    print num
         
 if __name__ == "__main__":
     fibonacci()
