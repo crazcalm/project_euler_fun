@@ -7,4 +7,24 @@ By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million, 
 find the sum of the even-valued terms.
 """
+from fibonacci import fib
+
+def main():
+
+	sum = 0
+	limit = 4000000
+
+	for num in fib(limit):
+		if num%2==0:
+			sum+= num
+
+	print "The sum is %s" %(sum)
+
+
+if __name__ == "__main__":
+	main()
+
+
+	
+	
 
