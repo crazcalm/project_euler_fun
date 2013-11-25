@@ -16,17 +16,13 @@ Steps:
 import time
 
 
-def eratosthenes(n = 200000):
+def eratosthenes(n = 100000):
     
     start = time.clock()
     
     numbers = range(3,n + 1,2)
     numbers.insert(0, 2)
-    
-    
-    #print "numbers", numbers
-    #yield numbers[0]
-    
+        
     for count, value in enumerate(numbers[1:]):
         
         prime = value
@@ -36,22 +32,14 @@ def eratosthenes(n = 200000):
             pass
         
         for index, num in enumerate(numbers[count +1:]):
-            #print "num and prime: %s, %s" %(num, prime)
-            
+
             if num % prime == 0 and num != prime:
                 numbers.remove(num)
-                #print "removing", num
-    
+                
     endtime = time.clock() - start
     print endtime
-    #print numbers
-
-"""
-for index, prime in enumerate(eratosthenes()):
-    print "Index %s: %s" % (index, prime)
-
+    
 if __name__ == "__main__":
-    eratosthenes()
-
-"""
+	for index, prime in enumerate(eratosthenes()):
+		print "Index %s: %s" % (index, prime)
                 
