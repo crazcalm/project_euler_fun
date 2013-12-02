@@ -16,7 +16,7 @@ Steps:
 import time
 
 
-def eratosthenes(n = 100000):
+def eratosthenes(n = 100):
     
     start = time.clock()
     
@@ -39,7 +39,24 @@ def eratosthenes(n = 100000):
     endtime = time.clock() - start
     print endtime
     
+#online code modified by me
+def eratosthenes2(n):
+    start = time.clock()
+    multiples = set()
+    for i in xrange(2, n+1):
+        if i not in multiples:
+            yield i
+            multiples.update(xrange(i*i, n+1, i))
+    endtime = time.clock() - start
+    print endtime
+ 
+#eratosthenes2(2000000)
+    
+    
 if __name__ == "__main__":
-	for index, prime in enumerate(eratosthenes()):
-		print "Index %s: %s" % (index, prime)
+    pass
+    #eratosthenes2(2000000)
+    #for index, prime in enumerate(eratosthenes()):
+        #print "Index %s: %s" % (index +1, prime)
+        
                 
