@@ -18,3 +18,31 @@ Find the number of characters saved by writing each of these in their minimal fo
 
 Note: You can assume that all the Roman numerals in the file contain no more than four consecutive identical units.
 """
+
+from helpers import file_reader, checkio, roman_to_number, CHART1, CHART2
+
+FILE = "roman.txt"
+
+def optimal_form(string):
+    number = roman_to_number(string)
+    new_rom = checkio(number)
+    return new_rom
+
+def main():
+
+    saved_chars = 0
+    for index, line in enumerate(file_reader(FILE)):
+        original = line.strip()
+        new_version = optimal_form(original)
+        print("1: %s\n2: %s" % (original, new_version))
+        saved = len(original) - len(new_version)
+        print("saved:", saved)
+        saved_chars += saved
+#        input("\n")
+#        if index > 5:
+#            break
+
+        print(saved_chars)
+
+if __name__ == "__main__":
+    main()
